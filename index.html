@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./assets/Favicon.ico" type="image/jpeg">
+</head>
+<body>
+  <header class="header">
+    <a href="./index.html" class="logo"><i class="fa-solid fa-paw"></i>Pet<span>Care</span></a>
+    <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="./pages/services.html">Services</a>
+        <a href="./pages/pricing.html">Pricing</a>
+        <a href="./pages/about.html">About Us</a>
+        <a href="./pages/contact.html">Contact Us</a>
+    </nav>
+    <i id="menu-btn" class="fas fa-bars"></i>
+  </header>
+    
+  <!-- home -->
+  <section class="home">
+    <div class="home-content">
+        <h3>PetCare</h3>
+        <p class="desc"> "Everything pets need."</p>
+        <div class="time-widget">
+          <p>Hello PetCare family! Right now, the clock shows <span id="cetTime">--:--:--</span>.</p>
+        </div>
+        
+        <script>
+          function updateCETTime() {
+            const now = new Date();
+            const opts = { timeZone: "Europe/Paris", hour12: false,
+                           hour: "2-digit", minute: "2-digit", second: "2-digit" };
+            document.getElementById("cetTime").textContent =
+              now.toLocaleTimeString("en-GB", opts);
+          }
+          updateCETTime();
+          setInterval(updateCETTime, 1000);
+        </script>
+    
+    <a href="./pages/about.html" class="btn">About Us</a>
+    </div>
+  </section>
+
+  <section class="icons-container">
+    <div class="icons">
+      <i class="fa-solid fa-stethoscope"></i>
+      <h3>Pet Help</h3>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-dog"></i>
+        <h3>Pet Love</h3>
+    </div>
+    
+    <div class="icons">
+      <i class="fa-solid fa-paw"></i>
+      <h3>Pet Support</h3>
+    </div>
+
+    <div class="icons">
+      <i class="fa-solid fa-hand-holding-heart"></i>
+      <h3>Pet Needs</h3>
+    </div>      
+  </section>
+
+  <!-- reviews -->
+  <section class="review">
+    <h1 class="heading">Client's <span>Reviews</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="./assets/Man1.jpg" alt="Man1">
+        <h3>Albert</h3>
+        <p class="job">Client</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text">Amazing place, amazing facilities, amazing staff and very good environment!</p>
+      </div>
+      <div class="box">
+        <img src="./assets/Man2.jpg" alt="Man2">
+        <h3>Andi</h3>
+        <p class="job">Client</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="text">Very Nice and cool environment! I really had a very good experience here. My Dog Loved It!</p>
+      </div>
+      <div class="box">
+        <img src="./assets/Man3.jpg" alt="Man3">
+        <h3>Xhoni</h3>
+        <p class="job">Client</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text">Very Good! Here, there are many good facilites for dogs and cats.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="footer-content">
+       <h3><i class="fa-solid fa-paw"></i>Pet<span>Care</span></h3> 
+       <p>We create a safe and happy place where pets feel at home.
+        With heart, care, and attention, we make sure every pet feels special and loved.</p>
+       <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+     </ul>
+    </div>
+  </section>
+
+  <div class="footer-bottom">
+    <p>copyright &copy;2025 <a href="#">Team 9</a> - PetCare</p>
+  </div>
+
+  <script src="https://kit.fontawesome.com/cb8535f973.js" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

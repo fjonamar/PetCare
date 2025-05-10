@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetCare - Contact</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="shortcut icon" href="../assets/Favicon.ico" type="image/jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo"><i class="fa-solid fa-paw"></i>Pet<span>Care</span></a>
+    <nav class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../pages/services.html">Services</a>
+      <a href="../pages/pricing.html">Pricing</a>
+      <a href="../pages/about.html">About Us</a>
+      <a href="../pages/contact.html">Contact Us</a>
+    </nav>
+    <i id="menu-btn" class="fas fa-bars"></i>
+  </header>
+
+  <section class="contact">
+    <h1 class="heading">Contact Us</h1>
+    <div class="box-container">
+      <div class="box">
+        <i class="fa-solid fa-headphones"></i>
+        <p>Live chat with our support team.</p>
+        <a href="#" class="btn">Support</a>
+      </div>
+      <div class="box">
+        <i class="fa-regular fa-envelope"></i>
+        <p>Reach us via email.</p>
+        <a href="mailto:info@petcare.com" class="btn">Send Mail</a>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-phone"></i>
+        <p>Call us: +355 687756777</p>
+        <a href="tel:+355687756777" class="btn">Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <form id="vetForm" class="vet-form" tabindex="1">
+      <h2>Pet Appointment</h2>
+
+      <div class="form-group">
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="phone">Phone (XXX-XXXXXXX) <span class="required">*</span></label>
+        <input type="text" id="phone" name="phone" placeholder="XXX-XXXXXXX" pattern="^[0-9]{3}-[0-9]{7}$" autocomplete="tel" required>
+        </div>
+
+      <fieldset class="form-group">
+        <legend>Gender of your pet<span class="required">*</span></legend>
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Services <span class="required">*</span></legend>
+        <div class="services-options">
+          <label><input type="checkbox" name="skills" value="Boarding"> Boarding</label>
+          <label><input type="checkbox" name="skills" value="Grooming"> Grooming</label>
+          <label><input type="checkbox" name="skills" value="Feeding"> Feeding</label>
+          <label><input type="checkbox" name="skills" value="Training"> Training</label>
+          <label><input type="checkbox" name="skills" value="Exercise"> Exercise</label>
+          <label><input type="checkbox" name="skills" value="Treatment"> Treatment</label>
+        </div>
+      </fieldset>
+
+      <!-- pet type -->
+<div class="form-group">
+  <label for="petType">Pet Type <span class="required">*</span></label>
+  <select id="petType" name="petType" required>
+    <option value="">-- Select Pet Type --</option>
+    <option value="Dog">Dog</option>
+    <option value="Cat">Cat</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
+<div id="otherTypeGroup" class="form-group">
+  <label for="otherPetType">Please specify <span class="required">*</span></label>
+  <input
+    type="text"
+    id="otherPetType"
+    name="otherPetType"
+    placeholder="e.g., Rabbit">
+</div>
+
+      
+<!-- appointment -->
+
+ <fieldset class="form-group date-group">
+       <legend>
+       Appointment Date <span class="required">*</span>
+      </legend>
+
+  <div class="date-nav">
+    <button type="button" id="prevMonth" aria-label="Previous Month">&larr;</button>
+    <span id="currentMonth"></span>
+    <button type="button" id="nextMonth" aria-label="Next Month">&rarr;</button>
+  </div>
+
+     <div id="appointmentCalendar"></div>
+     <input type="hidden" id="appointmentDate" name="appointmentDate">
+ </fieldset>
+
+
+      <div class="form-group password-container">
+        <label for="pass1">Create Password <span class="required">*</span></label>
+        <input type="password" id="pass1" name="pass1" placeholder="Password" required>
+        <label for="pass2">Confirm Password <span class="required">*</span></label>
+        <input type="password" id="pass2" name="pass2" placeholder="Confirm Password" required>
+        <label class="toggle-wrapper"><input type="checkbox" id="togglePass"> Show Password</label>
+      </div>
+
+      <!-- <div id="dropZone" class="drop-zone" tabindex="12">
+        Drag &amp; Drop or Click to Upload (PDF/JPG) of your pet
+      </div>
+      <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg" hidden> -->
+
+      <label for="fileInput" id="dropZone" class="drop-zone" tabindex="12">
+        Drag &amp; Drop or Click to Upload (PDF/JPG) of your pet
+      </label>
+      <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg" hidden>
+      
+
+      <div class="form-actions">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="button" id="resetBtn" class="reset-btn">Clear</button>
+      </div>
+    </form>
+
+    <div id="submissionInfo" class="submission-info"></div>
+  </main>
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="footer-content">
+      <h3><i class="fa-solid fa-paw"></i>Pet<span>Care</span></h3>
+      <p>We create a safe and happy place where pets feel at home.
+      With heart, care, and attention, we make sure every pet feels special and loved.</p>
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="footer-bottom">
+    <p>copyright &copy;2025 <a href="#">Team 9</a> - PetCare</p>
+  </div>
+
+  <script src="https://kit.fontawesome.com/cb8535f973.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
